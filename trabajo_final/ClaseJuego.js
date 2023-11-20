@@ -3,19 +3,23 @@ class ClaseJuego {
    constructor() {
     this.pantalla = 0;
     this.b = new byf();
+    
   }
 PantallaEstados(){
 switch(this.pantalla){
   //Pantalla de inicio
  case 0:
- this.b.tyi();
- this.b.mostrarI(0);
+  background(20);
+  this.b.menuB();
  break;
 
 case 1:
+  background(150);
+  this.b.mostrarBU();
 break;
 
 case 2:
+  background(20);
 break;
 
 case 3:
@@ -68,6 +72,19 @@ case 20:
 break;
 case 21:
 break;
+}
+}
+///eventos de mouse o teclado
+botonUno(mx,my){
+  //1 solo boton
+  if(this.pantalla==1 && mx>50 && mx<550 && my>490 && my<560){ 
+    this.pantalla=2;
+  }
+}
+//menu
+menu(mx,my){
+  if(this.pantalla==0 && mx>150 && mx<450 && my>200 && my<250){ 
+    this.pantalla=1;
 }
 }
 ////final de la clase
